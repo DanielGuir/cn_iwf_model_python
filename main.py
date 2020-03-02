@@ -12,7 +12,7 @@ if __name__ == "__main__":
             #'CN Ex Shares': 'Raw_Data_Examples\CN EX Shares_20190719.xls'}
     input_processor = ip.input_processor(data)
 
-    print('Num deleted' + str(input_processor.import_files(path).merge_tables_and_drop()))
+    print('Num deleted: ' + str(input_processor.import_files(path).merge_tables_and_drop()))
     #print(data['main_data'])
-    data['main_data'].to_excel('Test.xlsx')
+    data['main_data'].to_excel('Test.xlsx', index=True)
 
